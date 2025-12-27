@@ -1,0 +1,232 @@
+/* ===============================
+   💎 SAPHARY - TRANG SỨC SANG TRỌNG
+   =============================== */
+
+/* ====== RESET & CƠ BẢN ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf7; /* màu be nhẹ sang trọng */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: #fff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 2px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7a4a9c;
+  letter-spacing: 1px;
+}
+
+/* ====== NAVIGATION ====== */
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hiệu ứng underline animation */
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c77dff, #e0aaff, #c77dff, transparent);
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px #c77dff;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* Hiệu ứng glow khi hover */
+nav a:hover {
+  color: #e0aaff;
+  text-shadow: 0 0 15px rgba(224, 170, 255, 0.8), 0 0 25px rgba(199, 125, 255, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Hiệu ứng cho menu active */
+nav a.active {
+  color: #e0aaff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(224, 170, 255, 0.6);
+}
+
+nav a.active::before {
+  width: 100%;
+}
+
+/* ====== HERO SECTION ====== */
+.hero-section {
+  background: url("img/nền.jpg") center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+  padding: 100px 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: rgb(71, 31, 97);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(71, 31, 97, 0.8);
+  transform: translateY(-3px);
+}
+
+/* ====== PRODUCT GRID ====== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+/* ====== PRODUCT CARD ====== */
+.product-card {
+  background-color: #fdf9f6;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background-color: #fffaf7;
+}
+
+/* ====== ẢNH SẢN PHẨM ====== */
+.product-card img {
+  width: 100%;
+  height: 300px;         /* 👈 chỉnh kích thước cố định */
+  object-fit: cover;     /* giữ tỉ lệ ảnh */
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.4s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ====== THÔNG TIN SẢN PHẨM ====== */
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a3b2b;
+  margin: 12px 0 5px;
+}
+
+.product-card p {
+  color: #b16a41;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.product-card small {
+  color: #9a8c7d;
+  font-style: italic;
+  display: block;
+  padding-bottom: 12px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .product-card img {
+    height: 240px;
+  }
+}

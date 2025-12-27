@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Bông Tai Nữ Tính",
+        "price": 100000,
+        "quantity": 50,
+        "imgs": [
+            "img\/bong tai 2.jpg",
+            "img\/bong tai 3.webp"
+        ],
+        "desc": "Thiết kế bông tai hình trái tim, tôn lên vẻ nữ tính và thanh lịch.",
+        "hidden": false
+    },
+    {
+        "id": 2,
+        "name": "Dây Chuyền Tuyết",
+        "price": 300000,
+        "quantity": 30,
+        "imgs": [
+            "img\/day chuyen 4.jpg",
+            "img\/day chuyen 2.jpg"
+        ],
+        "desc": "Dây chuyền pha lê cao cấp phản chiếu ánh sáng lung linh.",
+        "hidden": false
+    },
+    {
+        "id": 3,
+        "name": "Vòng Tay",
+        "price": 250000,
+        "quantity": 40,
+        "imgs": [
+            "img\/vong tay 5.jpg",
+            "img\/vong tay 3.jpg"
+        ],
+        "desc": "Vòng tay ngọc trai sang trọng, phù hợp với mọi phong cách.",
+        "hidden": false
+    }
+]
